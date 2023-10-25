@@ -21,7 +21,7 @@ static char *colors[][3] = {
        [SchemeSel]  = { selfgcolor,  selbgcolor,  selbordercolor  },
 };
 
-/* tagging */
+/* workspace values*/
 static const char *tags[] = { "1", "2", "3"};
 
 static const Rule rules[] = {
@@ -66,6 +66,7 @@ static char dmenumon[2] = "0"; /* component of dmenucmd, manipulated in spawn() 
 static const char *dmenucmd[] = { "dmenu_run", "-m", dmenumon, "-fn", dmenufont};
 static const char *termcmd[]  = { "st", NULL };
 
+/* button definitions */
 static Key keys[] = {
 	/* modifier                     key        function        argument */
 	{ MODKEY,                       XK_l,      setmfact,       {.f = +0.05} },
@@ -94,11 +95,6 @@ static Key keys[] = {
 	{ MODKEY,			XK_minus,  setgaps,	   {.i = -1 } },
 	{ MODKEY,			XK_equal,  setgaps,	   {.i = +1 } },
 	{ MODKEY|ShiftMask,		XK_equal,  setgaps,	   {.i =  0 } },
-	/*INCREASE WINDOWS SIZE- PH */
-	{ MODKEY,			XK_Up,    increase_window_size,           {0} },
-	{ MODKEY,			XK_Down,  decrease_window_size,           {0} },
-	{ MODKEY,			XK_Left,  decrease_window_width,          {0} },
-	{ MODKEY,			XK_Right, increase_window_width,          {0} },
 	{ MODKEY,                       XK_F5,     xrdb,           {.v = NULL } },
 	TAGKEYS(                        XK_1,                      0)
 	TAGKEYS(                        XK_2,                      1)
@@ -113,7 +109,7 @@ static Key keys[] = {
 	
 };
 
-/* button definitions */
+
 /* click can be ClkTagBar, ClkLtSymbol, ClkStatusText, ClkWinTitle, ClkClientWin, or ClkRootWin */
 static Button buttons[] = {
 	/* click                event mask      button          function        argument */
