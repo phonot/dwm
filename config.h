@@ -94,6 +94,11 @@ static Key keys[] = {
 	{ MODKEY,			XK_minus,  setgaps,	   {.i = -1 } },
 	{ MODKEY,			XK_equal,  setgaps,	   {.i = +1 } },
 	{ MODKEY|ShiftMask,		XK_equal,  setgaps,	   {.i =  0 } },
+	/*INCREASE WINDOWS SIZE- PH */
+	{ MODKEY,			XK_Up,    increase_window_size,           {0} },
+	{ MODKEY,			XK_Down,  decrease_window_size,           {0} },
+	{ MODKEY,			XK_Left,  decrease_window_width,          {0} },
+	{ MODKEY,			XK_Right, increase_window_width,          {0} },
 	{ MODKEY,                       XK_F5,     xrdb,           {.v = NULL } },
 	TAGKEYS(                        XK_1,                      0)
 	TAGKEYS(                        XK_2,                      1)
@@ -105,6 +110,7 @@ static Key keys[] = {
 	TAGKEYS(                        XK_8,                      7)
 	TAGKEYS(                        XK_9,                      8)
 	{ MODKEY|ShiftMask,		XK_q,      quit,           {0} },
+	
 };
 
 /* button definitions */
