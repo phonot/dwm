@@ -26,7 +26,7 @@ static char *colors[][3] = {
 };
 
 /* workspace values*/
-static const char *tags[] = { "1", "2", "3"};
+static const char *tags[] = { "1", "2", "3", "4"};
 
 static const Rule rules[] = {
 	/* xprop(1):
